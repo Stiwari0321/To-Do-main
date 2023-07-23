@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <section class="greeting">
+			<h2 class="title">
+				What's up, <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+        <h1>Task Lists</h1>
+        <form id="new-task-form">
+            <input type="text"
+            id="new-task-input"
+            placeholder="Add new task" />
+            <input type="date"
+            id="new-task-date" />
+            <select name="" id="new-task-priority">
+                <option value="1" selected>Low</option>
+                <option value="2">Medium</option>
+                <option value="3">High</option>
+            </select>
+
+            <select name="" id="new-task-category">
+                <option value="1" selected>Personal</option>
+                <option value="2">Education</option>
+                <option value="3">Business</option>
+            </select>
+            
+            <input
+                type="submit"
+                id="new-task-submit"
+                value="Add Task" />
+        </form>
+        
+        <select name="" id="new-task-sort">
+            <option value="id" selected>Select</option>
+            <option value="priority">Priority</option>
+            <option value="completed">Completed</option>
+            <option value="category">Category</option>
+        </select>
+        
+        <button onclick="sort()" style="font-size: 1.25rem; color: white; font-weight: 800;">Sort</button>
+
+        <select name="" id="new-task-filter">
+            <option value="1" selected>Low</option>
+            <option value="2">Medium</option>
+            <option value="3">High</option>
+
+        </select>
+        <button onclick="filter()" style="font-size: 1.25rem; color: white; font-weight: 800;">Filter</button>
+        <button onclick="resetFilter()" style="font-size: 1.25rem; color: white; font-weight: 800;">Reset Filter</button>
+        <input type="text"
+            id="search"
+            placeholder="Search" 
+            />
+        </div>
+    
+    </header>
+    
+    <main>
+        
+
+        <section class="task-list">
+            
+
+            <h2>Tasks</h2>
+
+            <div id="tasks">
+                
+                <!-- <div class="task">
+                    <div class="content">
+                        <input 
+                            type="text"
+                            class="text"
+                            value="My shiny task"
+                            readonly
+                        />
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	background-image: url("https://r4.wallpaperflare.com/wallpaper/142/751/831/landscape-anime-digital-art-fantasy-art-wallpaper-9b468c3dc3116f4905f43bc9cddc0cf0.jpg");
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.5rem;
+	font-weight: 600;
+    text-align:center;
+	color: #fff;
+	margin-bottom: 1rem;
+}
+
+#new-task-form {
+	margin-bottom: 10px;
+	display: flex;
+}
+
+input[type="text"]{
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+button{
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-task-input {
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: #fff;
+	font-size: 1.25rem;
+}
+
+#new-task-priority,#new-task-category , #new-task-sort,#new-task-filter, #search{
+	/* flex: 1 1 0%; */
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: #fff;
+	font-size: 1.25rem;
+}
+
+#new-task-date {
+	/* flex: 1 1 0%; */
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: #fff;
+	font-size: 1.25rem;
+	border: none;
+}
+
+#new-task-input::placeholder {
+	color: #fff;
+}
+
+#new-task-submit {
+	color: var(--pink);
+	font-size: 1.25rem;
+	font-weight: 800;
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: rgb(255, 255, 255);
+	cursor: pointer;
+	transition: 0.4s;
+    border:none;
+}
+
+#new-task-submit:hover {
+	opacity: 0.8;
+}
+
+#new-task-submit:active {
+	opacity: 0.6;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+option {
+	background: var(--dark);
+}
+
+.task-list {
+	padding: 1rem;
+	width: 1000px;
+	height: 500px;
+	overflow: auto;
+	text-align:justify
+}
+
+.task-list h2 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #fff;
+	margin-bottom: 1rem;
+}
+
+#tasks .task {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.task .content {
+	display: flex;
+	flex: auto;
+}
+
+.task .content .text {
+	color: var(--light);
+	font-size: 1.125rem;
+    margin-left:1rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+	color: var(--pink);
+}
+
+.date, .priority {
+	background-color: transparent;
+	border: none;
+	width: 180px !important;
+}
+
+.task .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.task .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.task .actions button:hover {
+	opacity: 0.8;
+}
+
+.task .actions button:active {
+	opacity: 0.6;
+}
+
+.task .actions .edit {
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+	color: crimson;
+}
