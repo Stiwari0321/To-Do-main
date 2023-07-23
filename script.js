@@ -14,6 +14,7 @@ window.addEventListener("load", () => {
   search.addEventListener('input', (e)=> searchTask(e));
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+    
 
     const task = input.value;
     const dueDate = date.value;
